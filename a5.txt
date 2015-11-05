@@ -18,15 +18,48 @@ Teamwork
   to these rules might improve the functioning of
   your team in A6?
 
+  Our team is commited to maintaining open communication so that the team
+  can remain on top of our responsibilities and aware of our status. We
+  stressed the importance of testing our code and being accountable for the
+  work we contribute. We also strictly stuck to our 2 meetings a week policy,
+  which made the process of developing the design of our system very fluid.
+
+  I think that we worked very well together for this first submission and do not
+  have any specific changes to add. Group members were very collaborative, the
+  workload was split fairly and we continually maintained communication via a
+  group message. It was a very enjoyable experience.
+
+
 * How is everyone encouraged to stay accountable to the
   tasks they have been assigned?
+
+  Everyone is required to test their code contributions before committing them
+  to our repo. We also try to explain our codes and thought processes to each
+  other so as to ensure that we all agree on the logic behind the code. This
+  helps as a good safety net and helps us to better understand the underlying
+  software of the game.
+
 
 * What conflicts have arisen within your team? How (if at
   all) have the conflicts been resolved? What could you do
   to improve your team's ability to deal productively with
   conflict?
 
+  We have not had any meaningful conflicts due to the milestone 0 or milestone
+  1 submissions. In fact, the work has worked very fluidly thus far.
+
 * How do your meetings typically proceed? What do you
   accomplish and in how much time? What is effective about
   your team functioning during meetings? What changes would
   improve your meetings?
+
+  Our meetings are biweekly on Tue/Thu. We usually meet on campus at 4:30 PM and
+  try to minimize conflicts on the backend of our meetings so as to allow us to
+  meet for as long as we need to that day. We usually start by reviewing the
+  things we would like to accomplish. We then start discussing our ideas openly
+  and offer criticism/help/advice to others in the group as to how to better
+  develop their ideas. This is a great way to check that our thought-processes and
+  ideas are viable and the best way to implement something (4 CS students is
+  better than 1!). I think that we could try to work more independently instead of
+  collaboratively in order to minimize the time of our meetings and maximize our
+  productivity.
