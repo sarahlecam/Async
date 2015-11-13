@@ -29,14 +29,14 @@ let parallel_map f l =
   let new_list = List.map (fun x -> f x) l in
   (*second step: make recursive function that loops through new_l to make sure
     all elements are evaluated*)
-  let rec check l nl = (
+  let rec eval l nl = (
     match l with
     | [] -> return nl
     | h::t -> ( h >>=
-      fun x -> check t (nl@[x])
+      fun x -> eval t (nl@[x])
     )
   ) in
-  check new_list []
+  eval new_list []
   (* failwith "TODO" *)
 
 let sequential_map f l =
