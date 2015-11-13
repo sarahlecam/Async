@@ -23,12 +23,11 @@ let fork d f1 f2 =
   but ignores return value *)
   upon d (fun d -> ignore(f1 d); ignore(f2 d))
 
-(* TO-DO *)
 let parallel_map f l =
   (* calls f on every element of l immediately *)
   let new_list = List.map (fun x -> f x) l in
-  (*second step: make recursive function that loops through new_l to make sure
-    all elements are evaluated*)
+  (* loop through all defered elements of l and wait till they are determined
+  before checking the next element recursively *)
   let rec eval l nl = (
     match l with
     | [] -> return nl
@@ -37,11 +36,10 @@ let parallel_map f l =
     )
   ) in
   eval new_list []
-  (* failwith "TODO" *)
 
 let sequential_map f l =
-  (*loop through all elements of l and wait till f x is evaluated for each
-  member x of l before moving on to next element recursively*)
+  (* loop through all elements of l and wait till f x is evaluated for each
+  member x of l before moving on to next element recursively *)
   let rec transform l nl = (
     match l with
     | [] -> return nl
@@ -51,13 +49,13 @@ let sequential_map f l =
   ) in
   transform l []
 
-(* TO-DO *)
 let any ds =
-  (*create ivar*)
-  (* let ivar = Ivar.create in *)
-  (*iterate through ds and check if any values are evaluated*)
-  (*fill ivar if elmt is evaluated*)
-  (* upon *)
-  (*return elmt*)
-  failwith "TODO"
+  (* create ivar *)
+  let ivar = Ivar.create () in
+  (* fills ivar when value is determined *)
+  let filled x = upon x (fun y -> Ivar.fill ivar y) in
+  (* map function on list and ignore result *)
+  ignore(List.map (fun x -> filled x) ds);
+  (* return value stored in ivar *)
+  Ivar.read ivar
 

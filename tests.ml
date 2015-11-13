@@ -23,14 +23,25 @@ TEST "fork has unit tests" =
   (* test_async_eq (fork (return 0.4)
     (fun x -> job "hi" x)
     (fun x -> job "hey" x))
-  () *)
+  ()
+fork (return 0.4) (fun x -> job "bye" x) (fun x -> job "good" x);;
+
+*)
   failwith "TODO"
 
 TEST "parallel_map has unit tests" = failwith "TODO"
+(* parallel_map (fun x -> job "you" x) [0.5; 1.; 8.];;
+ *)
 
 TEST "sequential_map has unit tests" = failwith "TODO"
+(* sequential_map (fun x -> job "you" x) [0.5; 1.; 8.];;
+sequential_map (fun _ -> job "you" 1.) [4; 5];;
+ *)
 
 TEST "any has unit tests" = failwith "TODO"
+(* any [(job "hey" 2.); (job "bye" 7.)];;
+any [(job "hey" 10.); (job "bye" 7.)];;
+ *)
 
 (******************************************************************************)
 (** Unit tests for AQueue *****************************************************)
